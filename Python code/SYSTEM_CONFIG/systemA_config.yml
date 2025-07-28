@@ -1,0 +1,29 @@
+# system_config.yml
+# System configuration file for monochromators type A
+excitation monochromator:
+  # configuration file for excitation monochromator
+  type: A
+  min step count: 0 # minimum step count => Minimum wavelength in nm
+  max step count: 875000 # maximum step count => Maximum wavelength in nm
+
+  # serial port parameters
+  serial port: COM7 # serial port for communication
+  serial baud rate: 9600    # serial baud rate for communication
+
+  # step–wavelength relation parameters
+  offset: -57
+  coeff: 0.00124914285
+
+emission monochromator:
+  # configuration file for emission monochromator
+  type: A           
+  min step count: 0
+  max step count: 875000
+
+  # serial port parameters
+  serial port: COM8
+  serial baud rate: 9600
+
+  # step–wavelength relation parameters
+  offset: -57
+  coeff: 0.00124914285

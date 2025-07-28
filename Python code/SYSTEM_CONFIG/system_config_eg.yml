@@ -1,0 +1,53 @@
+# system_config.yml
+excitation monochromator:
+  # configuration file for excitation monochromator
+  type: A           # type of monochromator (A=Mechanical resolution model or B=Fully motorized model)
+  min step count: 0 # minimum step count => Minimum wavelength in nm
+  max step count: 10000 # maximum step count => Maximum wavelength in nm
+
+  # serial port parameters
+  serial port: /dev/ttyUSB0 # serial port for communication
+  serial baud rate: 9600    # serial baud rate for communication
+
+  # step–wavelength relation parameters
+  offset: 200
+  coeff: 0.006
+
+emission monochromator:
+  # configuration file for emission monochromator
+  type: B
+  min step count: 0
+  max step count: 10000
+
+  # serial port parameters
+  serial port: /dev/ttyUSB1
+  serial baud rate: 9600
+
+  # step–wavelength relation parameters
+  offset: 200
+  coeff: 0.006
+  phase coeff: 0.00678
+
+  light occluder 1: 
+    min step count: 0
+    max step count: 10000
+
+    # step–wavelength relation parameters
+    offset: 0
+    coeff: 0
+
+  light occluder 2:
+    min step count: 0
+    max step count: 10000
+
+    # step–wavelength relation parameters
+    offset: 0
+    coeff: 0
+
+  resolution:
+    min step count: 0
+    max step count: 10000
+
+    # step–wavelength relation parameters
+    offset: 0.15
+    coeff: 0.006

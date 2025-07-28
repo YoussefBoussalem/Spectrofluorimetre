@@ -1,0 +1,48 @@
+# system_config.yml
+excitation monochromator:
+  # configuration file for excitation monochromator
+  type: B
+  min step count: 0
+  max step count: 10000
+
+  # serial port parameters
+  serial port: COM7
+  serial baud rate: 9600
+
+  # step–wavelength relation parameters
+  offset: 200
+  coeff: 0.006
+  phase coeff: 0.00678
+
+  SLITS: 
+    number of slits: 2
+    min step count: 0
+    max step count: 10000
+
+    # step–wavelength relation parameters
+    offset: 0
+    coeff: 0
+
+emission monochromator:
+  # configuration file for emission monochromator
+  type: B
+  min step count: 0
+  max step count: 10000
+
+  # serial port parameters
+  serial port: COM8
+  serial baud rate: 9600
+
+  # step–wavelength relation parameters
+  offset: 200
+  coeff: 0.006
+  phase coeff: 0.00678
+
+  SLITS: 
+    number of slits: 3
+    min step count: 0
+    max step count: 10000
+
+    # step–wavelength relation parameters
+    offset: 0.15
+    coeff: 0.006

@@ -1,0 +1,54 @@
+# This is an example file for making several scans in a go. The different scan types are defined, and the parameters for each scan are specified.
+scans:
+  - name: Scan Emission           # name of the scan
+    type: emission                # type of scan (excitation or emission)
+    parameters:                  # parameters for the scan
+      integration time: 100ms       # integration time for the scan
+      resolution: 0.1          # resolution in nm (also affects light amount)
+
+      excitation wavelength: 750    # excitation wavelength in nm
+
+      scan range:
+        start: 200                  # start wavelength in nm
+        end: 800                    # end wavelength in nm
+        step size: 1                # step size in nm
+
+  - name: Scan Excitation
+    type: excitation
+    parameters:
+      integration time: 100ms
+      resolution: 1
+
+      scan range:
+        start: 200
+        end: 800
+        step size: 1
+
+      emission wavelength: 750
+
+  - name: Scan Synchronous
+    type: synchronous
+    parameters:
+      integration time: 100ms
+      resolution: 0.1
+
+      offset wavelength: 100         # offset wavelength in nm
+
+      scan range:
+        start: 200
+        end: 800
+        step size: 1
+
+  - name: Scan in one point
+    type: singular
+    parameters:
+      integration time: 100ms
+
+      excitation wavelength: 750
+      emission wavelength: 500
+
+
+#Light occluders are used to reduce the light intensity in the system. The value is either in percentage (0-100%) or in a range from 0 to 1.
+#Resolution is the parameter that defines how much light is allowed to pass through the monochromator (slit opening after the gratings). This defines the resolution of the scan.
+#Resolution is defined in nm, but it can also be defined in percentage (0-100%) or as a fraction (0-1). 
+#The higher the resolution, the less light is allowed to pass through the monochromator.
