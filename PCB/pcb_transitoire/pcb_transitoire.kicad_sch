@@ -5,7 +5,7 @@
 	(uuid "dac23c42-b954-456a-9520-ceba3d5966d0")
 	(paper "A4")
 	(title_block
-		(title "PCB de connection pour carte Arduino")
+		(title "PCB de connexion pour carte Arduino")
 		(date "19/06/2025")
 		(rev "1.0")
 		(company "IPCMS")
